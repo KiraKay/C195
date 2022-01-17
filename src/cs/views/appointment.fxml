@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs.controllers.AppointmentController">
+	<center>
+		<TableView fx:id="appointmentTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+			<columns>
+				<TableColumn fx:id="idCol" prefWidth="59.0" text="APT ID" />
+				<TableColumn fx:id="appointmentCol" minWidth="0.0" prefWidth="132.0" text="Title" />
+				<TableColumn fx:id="descriptionCol" minWidth="0.0" prefWidth="132.0" text="Description" />
+				<TableColumn fx:id="locationCol" prefWidth="96.0" text="Location" />
+				<TableColumn fx:id="aptStartCol" prefWidth="158.0" text="APT Start" />
+				<TableColumn fx:id="aptFinishCol" prefWidth="142.0" text="APT Finish" />
+				<TableColumn fx:id="typeCol" prefWidth="142.0" text="Type" />
+				<TableColumn fx:id="customerCol" prefWidth="71.0" text="Customer ID" />
+				<TableColumn fx:id="userCol" prefWidth="67.0" text="User ID" />
+				<TableColumn fx:id="contactCol" prefWidth="66.0" text="Contact ID" />
+			</columns>
+			<BorderPane.margin>
+				<Insets left="10.0" />
+			</BorderPane.margin>
+		</TableView>
+	</center>
+	<left>
+		<GridPane BorderPane.alignment="CENTER">
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+			</rowConstraints>
+			<children>
+				<Label text="Id" />
+				<Label text="Title" GridPane.rowIndex="1" />
+				<Label text="Description" GridPane.rowIndex="2" />
+				<Label text="Location" GridPane.rowIndex="3" />
+				<Label text="Starting Date" GridPane.rowIndex="4" />
+				<Label text="Starting Time" GridPane.rowIndex="5" />
+				<Label text="Finishing Date" GridPane.rowIndex="6" />
+				<TextField fx:id="idField" GridPane.columnIndex="1" />
+				<TextField fx:id="titleField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+				<TextField fx:id="descriptionField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+				<TextField fx:id="locationField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+				<ComboBox fx:id="customerField" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+				<Label text="Finishing Time" GridPane.rowIndex="7" />
+				<Label text="Type" GridPane.rowIndex="8" />
+				<Label text="Customer" GridPane.rowIndex="9" />
+				<Label text="Contact Person" GridPane.rowIndex="10" />
+				<ComboBox fx:id="contactField" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+				<TextField fx:id="typeField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+				<TextField fx:id="stField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+				<TextField fx:id="ftField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+				<DatePicker fx:id="sdField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+				<DatePicker fx:id="fdField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+				<Button mnemonicParsing="false" onAction="#select" prefHeight="25.0" prefWidth="90.0" text="Select" GridPane.rowIndex="11" />
+				<Button mnemonicParsing="false" onAction="#create" prefHeight="25.0" prefWidth="95.0" text="Create/Update" GridPane.rowIndex="12" />
+				<Button mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="81.0" text="Delete" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+				<Button mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="81.0" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+			</children>
+		</GridPane>
+	</left>
+	<padding>
+		<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+	</padding>
+	<bottom>
+		<Button mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="890.0" text="Back" BorderPane.alignment="CENTER">
+			<BorderPane.margin>
+				<Insets top="10.0" />
+			</BorderPane.margin>
+		</Button>
+	</bottom>
+</BorderPane>
