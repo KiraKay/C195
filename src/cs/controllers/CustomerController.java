@@ -180,7 +180,7 @@ public class CustomerController extends FXParent implements Initializable {
 					.get(customerTable.getSelectionModel().getSelectedIndex())
 					.getId());
 			updateData();
-			Utilities.alert("Record Removed", "You have deleted a record", getStage());
+			Utilities.alert("NOTIFICATION", "Record Deleted!", getStage());
 
 		} else {
 			Utilities.error("Deletion", "Select one row from the table",
